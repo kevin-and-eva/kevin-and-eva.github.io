@@ -9708,6 +9708,10 @@ a.text-dark:hover, a.text-dark:focus {
     text-align: center;
 }
 
+.location {
+	padding-top: 8px;
+}
+
 @keyframes action {
   0% {
     transform: translateY(0);
