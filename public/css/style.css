@@ -9716,6 +9716,7 @@ a.text-dark:hover, a.text-dark:focus {
 	padding: 15px;
 	text-decoration:none !important;
 	border-radius: 5px;
+    letter-spacing: 1px;
 }
 
 @keyframes action {
