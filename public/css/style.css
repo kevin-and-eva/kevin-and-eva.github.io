@@ -9712,6 +9712,12 @@ a.text-dark:hover, a.text-dark:focus {
 	padding-top: 8px;
 }
 
+.open-invitation {
+	padding: 15px;
+	text-decoration:none !important;
+	border-radius: 5px;
+}
+
 @keyframes action {
   0% {
     transform: translateY(0);
