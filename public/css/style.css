@@ -6211,8 +6211,8 @@ a.close.disabled {
   bottom: 20px;
   left: 15%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: #fff;
   text-align: center;
 }
