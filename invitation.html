@@ -665,8 +665,10 @@
             const params = new URLSearchParams(window.location.search);
             const guest = params.get("guest");
             const partner = params.get("partner");
-            $("span#guest").html(guest);
-            $("span#partner").html(partner);
+            if(guest != null && partner != null) {
+            	$("span#guest").html(guest);
+	            $("span#partner").html(partner);
+            }
             
             function copyAccountNo1() {
                 var copyText1 = document.getElementById("accountNo1");
