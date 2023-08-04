@@ -10026,3 +10026,14 @@ a.text-dark:hover, a.text-dark:focus {
   background: #FFFFFF;
   font-size: 30px;
 }
+
+.first-box {
+	height: 100%;
+	width: 100%;
+	display: table;
+	position: absolute;
+}
+
+.last-box {
+	display: none;
+}

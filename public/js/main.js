@@ -1,5 +1,14 @@
 (function ($) {
     "use strict";
+    
+    $(".open-invitation").click(function(e) {
+    	e.preventDefault();
+    	$(".first-box").css("display", "none");
+    	$(".last-box").css("display", "block");
+    	var music = document.getElementById("music");
+    	music.play();
+    	return false;
+	});
 
     // Navbar on scrolling
     $(window).scroll(function () {
