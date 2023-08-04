@@ -1,10 +1,15 @@
 (function ($) {
     "use strict";
     
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+    });
+    
     $(".open-invitation").click(function(e) {
     	e.preventDefault();
+    	$("body").css("overflow", "auto");
     	$(".first-box").css("display", "none");
-    	$(".last-box").css("display", "block");
+    	$(".last-box").css("visibility", "visible");
     	var music = document.getElementById("music");
     	music.play();
     	return false;
