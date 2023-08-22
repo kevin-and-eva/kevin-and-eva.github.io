@@ -54,9 +54,13 @@
 					</div>
 					<div class="col-12 text-center pt-4">
 						<a class="bg-primary text-white open-invitation" href="#">
-							<i class="fas fa-envelope text-white"></i> &nbsp;OPEN INVITATION&nbsp; <i class="fas fa-envelope text-white"></i>
+							<i class="fas fa-envelope text-white"></i> &nbsp;<b>OPEN INVITATION</b>&nbsp; <i class="fas fa-envelope text-white"></i>
 						</a>
 					</div>
+                    <div class="col-12 text-center pt-4">
+                        <p class="m-0 pt-4" style="font-size: 12px;">Countdown to The Wedding Day</p>
+                        <div id="countdown" class="text-primary"></div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -661,6 +665,7 @@
 
         <!-- Template Javascript -->
         <script src="public/js/main.js?v=0.0.7"></script>
+        <script src="public/js/jquery.countdown.min.js?v=0.0.7"></script>
         
         <script>
             const params = new URLSearchParams(window.location.search);
@@ -670,6 +675,10 @@
             	$("span#guest").html(guest);
 	            $("span#partner").html(partner);
             }
+            
+            $("#countdown").countdown("2023/09/27", function(event) {
+                $(this).html(event.strftime("%w Weeks %d Days, %H : %M : %S"));
+            });
             
             function copyAccountNo1() {
                 var copyText1 = document.getElementById("accountNo1");
