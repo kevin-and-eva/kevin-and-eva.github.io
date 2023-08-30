@@ -50,7 +50,7 @@
     });
 
     // Portfolio isotope and filter
-    $(window).load(function() {
+    $(window).on('load', function() {
         var portfolioIsotope = $('.portfolio-container').isotope({
             itemSelector: '.portfolio-item',
             layoutMode: 'fitRows'
