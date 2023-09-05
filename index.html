@@ -48,9 +48,9 @@
 				<div class="row">
 					<div class="col-12 text-center pt-4">
 						<p class="m-0">This invitation is addressed to</p>
-						<span id="guest" class="text-white mt-2 font-weight-bold" style="font-size: 20px;">Guest</span>
-                        <b style="font-size: 20px;">&amp;</b>
-                        <span id="partner" class="text-white mt-2 font-weight-bold" style="font-size: 20px;">Guest Partner</span>
+						<span class="text-white mt-2 font-weight-bold guest" style="font-size: 20px;"></span>
+                        <b class="and-guest-partner" style="font-size: 20px;"></b>
+                        <span class="text-white mt-2 font-weight-bold guest-partner" style="font-size: 20px;"></span>
 					</div>
 					<div class="col-12 text-center pt-4">
 						<a class="bg-primary text-white open-invitation" href="#">
@@ -671,9 +671,19 @@
             const params = new URLSearchParams(window.location.search);
             const guest = params.get("guest");
             const partner = params.get("partner");
-            if(guest != null && partner != null) {
-            	$("span#guest").html(guest);
-	            $("span#partner").html(partner);
+            if(guest == null && partner == null) {
+            	$(".guest").html("Guest");
+                $(".and-guest-partner").html("&amp;");
+                $(".guest-partner").html("Guest Partner");
+            }
+            
+            if(guest != null) {
+            	$(".guest").html(guest);
+            }
+            
+            if(partner != null) {
+            	$(".and-guest-partner").html("&amp;");
+	            $(".guest-partner").html(partner);
             }
             
             $("#countdown").countdown("2023/09/27", function(event) {
